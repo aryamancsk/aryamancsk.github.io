@@ -470,27 +470,69 @@ function initContactForm() {
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
   const submitBtn = document.getElementById('form-submit-btn');
+  const gmailBtn = document.getElementById('form-gmail-btn');
   const mailtoBtn = document.getElementById('form-mailto-btn');
 
-  // Handle direct Form Submission via AJAX to FormSubmit
+  function getFormData() {
+    const name = document.getElementById('form-name')?.value.trim() || 'Colleague / Recruiter';
+    const email = document.getElementById('form-email')?.value.trim() || '';
+    const subject = document.getElementById('form-subject')?.value.trim() || 'AI/ML Systems Opportunity';
+    const message = document.getElementById('form-message')?.value.trim() || '';
+    return { name, email, subject, message };
+  }
+
+  function validateBasic(data) {
+    if (!data.name || !data.email || !data.message) {
+      if (status) {
+        status.className = 'form-status error';
+        status.textContent = 'Please fill out your Name, Email, and Message before sending.';
+      }
+      return false;
+    }
+    return true;
+  }
+
+  // Action 1: Send via Gmail Web (Google Mail compose in browser)
+  gmailBtn?.addEventListener('click', () => {
+    const data = getFormData();
+    if (!validateBasic(data)) return;
+
+    const fullSubject = `[Portfolio Inquiry] ${data.subject} — from ${data.name}`;
+    const fullBody = `Hi Aryaman,\n\n${data.message}\n\nBest regards,\n${data.name}\nEmail: ${data.email}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=aryamanjain96@gmail.com&su=${encodeURIComponent(fullSubject)}&body=${encodeURIComponent(fullBody)}`;
+
+    window.open(gmailUrl, '_blank');
+    if (status) {
+      status.className = 'form-status success';
+      status.innerHTML = '✓ <strong>Opened Gmail Compose tab!</strong> Simply review and click "Send" in Gmail.';
+    }
+    showToast('Opening Gmail compose...');
+  });
+
+  // Action 2: Send via Default Mail App (Apple Mail, Outlook, Mobile Mail)
+  mailtoBtn?.addEventListener('click', () => {
+    const data = getFormData();
+    if (!validateBasic(data)) return;
+
+    const fullSubject = `[Portfolio Inquiry] ${data.subject} — from ${data.name}`;
+    const fullBody = `Hi Aryaman,\n\n${data.message}\n\nBest regards,\n${data.name}\nEmail: ${data.email}`;
+    const mailtoUrl = `mailto:aryamanjain96@gmail.com?subject=${encodeURIComponent(fullSubject)}&body=${encodeURIComponent(fullBody)}`;
+
+    window.location.href = mailtoUrl;
+    if (status) {
+      status.className = 'form-status success';
+      status.innerHTML = '✓ <strong>Launched your email application!</strong> Simply hit send in your mail app.';
+    }
+    showToast('Opening default email app...');
+  });
+
+  // Action 3: Send via Direct Web Dispatch (FormSubmit)
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (!submitBtn || !status) return;
 
-    const nameInput = document.getElementById('form-name');
-    const emailInput = document.getElementById('form-email');
-    const subjectInput = document.getElementById('form-subject');
-    const messageInput = document.getElementById('form-message');
-    const hiddenSubject = document.getElementById('form-hidden-subject');
-
-    const name = nameInput?.value.trim() || 'Portfolio Visitor';
-    const email = emailInput?.value.trim() || '';
-    const subject = subjectInput?.value.trim() || 'General Inquiry';
-    const message = messageInput?.value.trim() || '';
-
-    if (hiddenSubject) {
-      hiddenSubject.value = `[Portfolio] ${subject} — from ${name}`;
-    }
+    const data = getFormData();
+    if (!validateBasic(data)) return;
 
     const originalBtnText = submitBtn.innerHTML;
     submitBtn.innerHTML = `
@@ -498,48 +540,68 @@ function initContactForm() {
         <circle cx="12" cy="12" r="10"/>
         <path d="M12 2a10 10 0 0 1 10 10"/>
       </svg>
-      <span>Dispatching to Aryaman...</span>
+      <span>Dispatching to aryamanjain96@gmail.com...</span>
     `;
     submitBtn.disabled = true;
     submitBtn.style.opacity = '0.7';
 
     status.className = 'form-status';
-    status.textContent = 'Transmitting message to aryamanjain96@gmail.com...';
+    status.textContent = 'Transmitting message to Aryaman...';
+
+    const fullSubject = `[Portfolio Inquiry] ${data.subject} — from ${data.name}`;
+    const fullBody = `Hi Aryaman,\n\n${data.message}\n\nBest regards,\n${data.name}\nEmail: ${data.email}`;
+    const gmailFallbackUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=aryamanjain96@gmail.com&su=${encodeURIComponent(fullSubject)}&body=${encodeURIComponent(fullBody)}`;
 
     try {
-      const formData = new FormData(form);
+      const payload = {
+        name: data.name,
+        email: data.email,
+        _subject: fullSubject,
+        message: data.message,
+        _template: 'table',
+        _captcha: 'false'
+      };
 
       const response = await fetch('https://formsubmit.co/ajax/aryamanjain96@gmail.com', {
         method: 'POST',
         headers: {
+          'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        body: formData
+        body: JSON.stringify(payload)
       });
 
-      const data = await response.json();
+      const resData = await response.json();
 
-      if (response.ok || data.success === 'true' || data.success === true) {
+      if (resData.success === 'true' || resData.success === true) {
         status.className = 'form-status success';
-        status.innerHTML = '✓ <strong>Message dispatched successfully!</strong> Aryaman has received your inquiry and will follow up shortly.';
+        status.innerHTML = '✓ <strong>Message dispatched successfully!</strong> Aryaman has received your inquiry in his inbox.';
         form.reset();
         showToast('Message sent to Aryaman!');
-      } else if (data.message && data.message.includes('Activation')) {
-        // FormSubmit sent first-time activation to Aryaman
-        status.className = 'form-status success';
-        status.innerHTML = '✓ <strong>Transmission sent!</strong> FormSubmit is verifying delivery to aryamanjain96@gmail.com.';
-        form.reset();
-        showToast('Inquiry received!');
+      } else if (resData.message && resData.message.includes('Activation')) {
+        // FormSubmit pending email activation
+        status.className = 'form-status';
+        status.innerHTML = `
+          <div style="margin-bottom: 0.5rem; color: #F59E0B;">
+            ⚠️ Web dispatch service is awaiting initial email confirmation.
+          </div>
+          <a href="${gmailFallbackUrl}" target="_blank" class="btn btn-sm btn-primary" style="display: inline-flex; margin-top: 4px;">
+            <span>Click to Send via Gmail Web Immediately &rarr;</span>
+          </a>
+        `;
+        showToast('Click button to send via Gmail');
       } else {
-        throw new Error(data.message || 'Delivery failed');
+        throw new Error(resData.message || 'Delivery error');
       }
     } catch (err) {
-      console.warn('Form submission fallback triggered:', err);
-      status.className = 'form-status error';
+      console.warn('Direct web dispatch error:', err);
+      status.className = 'form-status';
       status.innerHTML = `
-        <span>Network dispatch encountered an issue.</span>
-        <a href="mailto:aryamanjain96@gmail.com?subject=${encodeURIComponent('[Portfolio] ' + subject)}&body=${encodeURIComponent('Hi Aryaman,\n\n' + message + '\n\nBest,\n' + name + ' (' + email + ')')}" style="color: #6366F1; text-decoration: underline; margin-left: 6px; font-weight: 700;">
-          Click here to open directly in your Email App &rarr;
+        <div style="margin-bottom: 0.5rem; color: #EF4444;">
+          Notice: Browser security restricted third-party web dispatch.
+        </div>
+        <a href="${gmailFallbackUrl}" target="_blank" class="btn btn-sm btn-primary" style="display: inline-flex; margin-top: 4px;">
+          <span>Click to Send via Gmail in 1 Click &rarr;</span>
         </a>
       `;
     } finally {
@@ -547,18 +609,6 @@ function initContactForm() {
       submitBtn.disabled = false;
       submitBtn.style.opacity = '1';
     }
-  });
-
-  // Handle "Open in Email App" button click
-  mailtoBtn?.addEventListener('click', () => {
-    const name = document.getElementById('form-name')?.value.trim() || 'Visitor';
-    const email = document.getElementById('form-email')?.value.trim() || '';
-    const subject = document.getElementById('form-subject')?.value.trim() || 'AI/ML Discussion / Opportunity';
-    const message = document.getElementById('form-message')?.value.trim() || 'Hi Aryaman,\n\nI came across your portfolio and would love to connect regarding...';
-
-    const mailtoUrl = `mailto:aryamanjain96@gmail.com?subject=${encodeURIComponent('[Portfolio] ' + subject)}&body=${encodeURIComponent(message + '\n\n— Sent by ' + name + ' (' + email + ')')}`;
-    window.location.href = mailtoUrl;
-    showToast('Opening your email app...');
   });
 }
 

@@ -1458,7 +1458,41 @@ html.light .alt-bg {
 .form-buttons-row {
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.75rem;
+}
+
+.form-quick-dispatch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .form-quick-dispatch {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-divider-row {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  margin: 0.2rem 0;
+}
+
+.form-divider-row::before,
+.form-divider-row::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--bg-card-border);
+}
+
+.form-divider-row span {
+  padding: 0 0.65rem;
 }
 
 .form-group {

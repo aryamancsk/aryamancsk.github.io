@@ -116,6 +116,14 @@ function initCopyButtons() {
       }
     });
   });
+
+  // Download notifications for website zip archive
+  const downloadLinks = document.querySelectorAll('.download-link');
+  downloadLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      showToast('Downloading complete website archive (.zip)...');
+    });
+  });
 }
 
 function showToast(message) {

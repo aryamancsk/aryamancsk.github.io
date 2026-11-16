@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aryaman Srimali Jain | AI & Machine Learning Engineer</title>
+  <meta name="description" content="Portfolio of Aryaman Srimali Jain — AI & Machine Learning Engineer, Data Scientist, and M.Tech in AI Systems candidate at NUS-ISS. Specializing in Deep Learning, Computer Vision, Unsupervised Anomaly Detection, and Full-Stack ML Systems.">
+  <meta name="keywords" content="Aryaman Srimali Jain, AI Engineer, Machine Learning, Deep Learning, Computer Vision, PatchCore, NUS, M.Tech, Data Science, Portfolio">
+  <meta name="author" content="Aryaman Srimali Jain">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aryaman Srimali Jain | AI & Machine Learning Engineer">
+  <meta property="og:description" content="M.Tech in AI Systems Candidate at NUS-ISS. Architecting production unsupervised deep learning pipelines, computer vision systems, and cloud-native ML inference engines.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons (Vanilla Feather / Lucide equivalent via CDN or custom SVG icons) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="toast" role="alert" aria-live="polite">
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- Navigation -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Aryaman Srimali Jain Home">
+        <span class="logo-badge">ASJ</span>
+        <span class="logo-text">Aryaman<span class="accent-dot">.</span>ai</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#research" class="nav-link">Research</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link highlight">Get in Touch</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-button" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn-sm btn-primary hide-mobile">Hire / Connect</a>
+
+        <button id="mobile-nav-toggle" class="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-pill">
+            <span class="status-indicator"></span>
+            <span>M.Tech AI Systems @ NUS-ISS &bull; Open to Research & AI/ML Roles</span>
+          </div>
+
+          <h1 class="hero-title">
+            Engineering <span class="gradient-text">Intelligent Vision</span> & Scalable <span class="gradient-text-alt">ML Systems</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Hi, I'm <strong class="text-glow">Aryaman Srimali Jain</strong> — an AI & Machine Learning Engineer based in Singapore. 
+            I bridge the gap between rigorous mathematical deep learning research and high-throughput production inference engines, specializing in Unsupervised Anomaly Detection, Computer Vision, and Cloud MLOps.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="mailto:aryamanjain96@gmail.com" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Contact Directly</span>
+            </a>
+            <button class="btn btn-ghost copy-btn" data-copy="aryamanjain96@gmail.com" title="Copy Email Address">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+              <span>Copy Email</span>
+            </button>
+          </div>
+
+          <div class="hero-social-links">
+            <a href="https://linkedin.com/in/aryaman-s-jain" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/aryamancsk" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <span class="location-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Singapore 659444
+            </span>
+            <span class="phone-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +65-86960192
+            </span>
+          </div>
+        </div>
+
+        <!-- Hero Metric / Interactive Code Card -->
+        <div class="hero-visual">
+          <div class="glass-terminal">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">inference_pipeline.py &bull; PatchCore WideResNet-50</span>
+              <span class="terminal-tag">FASTAPI</span>
+            </div>
+
+            <div class="terminal-body font-mono">
+              <div class="code-line"><span class="code-comment"># Anomaly Engine & Coreset Embeddings</span></div>
+              <div class="code-line"><span class="code-kw">import</span> torch, torchvision</div>
+              <div class="code-line"><span class="code-kw">from</span> core.sampler <span class="code-kw">import</span> GreedyCoreset</div>
+              <div class="code-line"><span class="code-kw">from</span> core.knn <span class="code-kw">import</span> GPU_Exact_kNN</div>
+              <div class="code-line">&nbsp;</div>
+              <div class="code-line"><span class="code-kw">class</span> <span class="code-fn">IndustrialInspector</span>:</div>
+              <div class="code-line">&nbsp;&nbsp;<span class="code-kw">def</span> <span class="code-fn">inspect</span>(self, frame_tensor):</div>
+              <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;feat = self.backbone.extract(layer2, layer3)</div>
+              <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;dist, idx = self.knn.search(feat, k=9)</div>
+              <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;heatmap = gaussian_smooth(dist, sigma=4)</div>
+              <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-kw">return</span> {</div>
+              <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"roc_auc"</span>: <span class="code-num">0.896</span>,</div>
+              <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"precision"</span>: <span class="code-num">0.991</span>,</div>
+              <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"latency_ms"</span>: <span class="code-str">"174ms"</span>,</div>
+              <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"decision"</span>: <span class="code-accent">"DEFECT_DETECTED"</span></div>
+              <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+            </div>
+
+            <div class="terminal-metrics">
+              <div class="metric-pill">
+                <span class="metric-val">0.896</span>
+                <span class="metric-lbl">Image ROC-AUC</span>
+              </div>
+              <div class="metric-pill">
+                <span class="metric-val">99.1%</span>
+                <span class="metric-lbl">Precision</span>
+              </div>
+              <div class="metric-pill">
+                <span class="metric-val">&lt;200ms</span>
+                <span class="metric-lbl">Inference Latency</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Bar -->
+      <div class="container">
+        <div class="metrics-bar">
+          <div class="metric-item">
+            <span class="metric-number" data-target="1.5">1.5+</span>
+            <span class="metric-label">Years Cross-Disciplinary ML Experience</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-number" data-target="2">2+</span>
+            <span class="metric-label">IEEE Research Paper & Presentations</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-number" data-target="12">12+</span>
+            <span class="metric-label">Industry Cloud & AI Certifications</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-number" data-target="99.1">99.1%</span>
+            <span class="metric-label">Peak Anomaly Detection Precision</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">BACKGROUND & PHILOSOPHY</span>
+          <h2 class="section-title">Architecting Machine Intelligence with Mathematical Rigor</h2>
+          <p class="section-subtitle">From unsupervised deep vision to scalable distributed inference pipelines</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-card">
+            <div class="about-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <h3>Computer Vision & Anomaly Detection</h3>
+            <p>
+              Deep focus on unsupervised visual representation learning (PatchCore, WideResNet-50, Greedy Coreset Sampling, and GPU k-NN). Capable of segmenting complex structural anomalies (scratches, cracks) and logical defects (component count, miswiring) without manual defect labeling.
+            </p>
+            <div class="tag-cloud">
+              <span class="badge">PyTorch</span>
+              <span class="badge">PatchCore</span>
+              <span class="badge">OpenCV</span>
+              <span class="badge">Coreset Sampling</span>
+            </div>
+          </div>
+
+          <div class="about-card glass-card">
+            <div class="about-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h10M7 12h10M7 17h10"/></svg>
+            </div>
+            <h3>Production Backend & MLOps</h3>
+            <p>
+              Experience taking models out of Jupyter notebooks into high-concurrency production microservices. Skilled in FastAPI, asynchronous async/await endpoints, Docker, AWS (S3, VPC, Lambda), CI/CD pipelines, and sub-200ms real-time inference serving.
+            </p>
+            <div class="tag-cloud">
+              <span class="badge">FastAPI</span>
+              <span class="badge">AWS Cloud</span>
+              <span class="badge">Docker</span>
+              <span class="badge">CI/CD</span>
+            </div>
+          </div>
+
+          <div class="about-card glass-card">
+            <div class="about-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            </div>
+            <h3>Graph & Geospatial Intelligence</h3>
+            <p>
+              Author of published IEEE machine learning research combining multi-modal geospatial telemetry, satellite imagery, and deep temporal networks (CNN + LSTM). Skilled with Neo4j graph databases across 5,000+ nodes for knowledge graphs and recommendation engines.
+            </p>
+            <div class="tag-cloud">
+              <span class="badge">Neo4j</span>
+              <span class="badge">GIS Telemetry</span>
+              <span class="badge">CNN-LSTM</span>
+              <span class="badge">IEEE Author</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION WITH INTERACTIVE DEMOS -->
+    <section id="projects" class="section alt-bg">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">PORTFOLIO WORK</span>
+          <h2 class="section-title">Key AI & Machine Learning Engineering Projects</h2>
+          <p class="section-subtitle">Real-world systems spanning computer vision inspection, geospatial early warning, and predictive modeling</p>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="filter-wrapper">
+          <button class="filter-btn active" data-filter="all">All Systems</button>
+          <button class="filter-btn" data-filter="cv">Computer Vision & Anomaly</button>
+          <button class="filter-btn" data-filter="geo">Deep Learning & GIS</button>
+          <button class="filter-btn" data-filter="ml">Ensemble & Analytics</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- PROJECT 1: MVTec LOCO AD (Flagship) -->
+          <article class="project-card featured-project glass-card" data-category="cv">
+            <div class="project-badge-row">
+              <span class="tag-featured">Flagship Graduate System</span>
+              <span class="tag-meta">Sep 2026 – Oct 2026 &bull; NUS-ISS</span>
+            </div>
+
+            <div class="project-content-grid">
+              <div class="project-info">
+                <h3 class="project-title">MVTec LOCO AD — Industrial Visual Anomaly & Defect Inspector</h3>
+                <p class="project-desc">
+                  An end-to-end unsupervised visual quality assurance system engineered to detect both structural defects (scratches, contamination, broken surfaces) and complex logical defects (missing components, improper screw counts, miswired cable harnesses) without defect training labels.
+                </p>
+
+                <div class="project-highlights">
+                  <div class="highlight-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>0.896 Image ROC-AUC</strong> and <strong>0.872 Pixel-level ROC-AUC</strong> with 99.1% Precision.</span>
+                  </div>
+                  <div class="highlight-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>Greedy Coreset Sampling (10% ratio)</strong> + Sparse Random Projection for fast memory footprint.</span>
+                  </div>
+                  <div class="highlight-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>Sub-200ms FastAPI serving</strong> with GPU-accelerated TorchNN k-NN and 5 statistical quality-control thresholds (Optimal F1 to &mu;+4&sigma;).</span>
+                  </div>
+                </div>
+
+                <div class="tech-stack-list">
+                  <span class="tech-tag">PyTorch</span>
+                  <span class="tech-tag">WideResNet-50-2</span>
+                  <span class="tech-tag">PatchCore</span>
+                  <span class="tech-tag">FastAPI</span>
+                  <span class="tech-tag">GPU k-NN</span>
+                  <span class="tech-tag">SQLite</span>
+                </div>
+
+                <div class="project-actions">
+                  <button class="btn btn-primary btn-sm open-demo-btn" data-demo="mvtec">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    <span>Interactive Defect Simulator</span>
+                  </button>
+                  <a href="https://github.com/aryamancsk" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <span>View Repository</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Interactive Card Visualizer Preview -->
+              <div class="project-preview-box">
+                <div class="inspector-card">
+                  <div class="inspector-header">
+                    <span class="badge-status-defective">LOGICAL DEFECT DETECTED</span>
+                    <span class="category-name">Breakfast Box #41</span>
+                  </div>
+                  <div class="heatmap-simulation-wrap">
+                    <div class="simulation-canvas">
+                      <div class="box-wireframe">
+                        <div class="cell normal">Tangerine (OK)</div>
+                        <div class="cell normal">Cereal Bar (OK)</div>
+                        <div class="cell anomaly-glow">
+                          <span class="glow-tag">MISPLACED ITEM</span>
+                          Banana (Missing)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="stat-row">
+                    <div class="stat-unit">
+                      <span class="stat-label">Anomaly Score</span>
+                      <span class="stat-value text-red">0.842 <span class="sub">(Thresh: 0.610)</span></span>
+                    </div>
+                    <div class="stat-unit">
+                      <span class="stat-label">Processing Time</span>
+                      <span class="stat-value text-cyan">188 ms</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: FloodBot (IEEE Published) -->
+          <article class="project-card glass-card" data-category="geo">
+            <div class="project-badge-row">
+              <span class="tag-academic">IEEE Published &bull; ICCSP 2025</span>
+              <span class="tag-meta">Jan 2024 – Jan 2025</span>
+            </div>
+
+            <h3 class="project-title">FloodBot — Real-Time Geospatial Flood Prediction & Alert System</h3>
+            <p class="project-desc">
+              Multi-modal deep learning flood forecasting system integrating rainfall telemetry, soil saturation, digital elevation models (DEM), and water-level telemetry to forecast inundation events up to 72 hours (3 days) in advance.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Benchmarked <strong>CNN, LSTM, and Random Forest</strong> across multi-source satellite GIS datasets.</span>
+              </div>
+              <div class="highlight-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Selected Deep CNN for <strong>+12% superior spatial feature accuracy</strong> over baseline temporal models.</span>
+              </div>
+              <div class="highlight-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Deployed live emergency web alert interface and co-authored IEEE research paper.</span>
+              </div>
+            </div>
+
+            <div class="tech-stack-list">
+              <span class="tech-tag">Deep Learning (CNN/LSTM)</span>
+              <span class="tech-tag">GIS Satellite Imagery</span>
+              <span class="tech-tag">Digital Elevation (DEM)</span>
+              <span class="tech-tag">Weather APIs</span>
+              <span class="tech-tag">Python</span>
+            </div>
+
+            <div class="project-actions">
+              <button class="btn btn-secondary btn-sm open-demo-btn" data-demo="floodbot">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6v6l4 2"/></svg>
+                <span>72h Telemetry Simulator</span>
+              </button>
+              <a href="https://doi.org/10.1109/ICCSP64183.2025.11088698" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <span>Read IEEE Paper</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Predictive Analytics & Ensemble Suite -->
+          <article class="project-card glass-card" data-category="ml">
+            <div class="project-badge-row">
+              <span class="tag-ml">Machine Learning Suite</span>
+              <span class="tag-meta">Jan 2023 – Mar 2023</span>
+            </div>
+
+            <h3 class="project-title">Predictive Analytics & Ensemble ML Suite</h3>
+            <p class="project-desc">
+              Comprehensive meteorological precipitation and student career placement predictive engine. Benchmarked multiple boosting algorithms against baseline statistical regressors with automated EDA and visual diagnostics.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Meteorological rainfall forecasting pipeline attaining <strong>86% prediction accuracy</strong>.</span>
+              </div>
+              <div class="highlight-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Benchmarked 4 ensemble models: <strong>Random Forest, XGBoost, LightGBM, and MLP Classifier</strong>.</span>
+              </div>
+              <div class="highlight-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Engineered automated feature selection, correlation matrices, and placement classification.</span>
+              </div>
+            </div>
+
+            <div class="tech-stack-list">
+              <span class="tech-tag">Scikit-Learn</span>
+              <span class="tech-tag">XGBoost</span>
+              <span class="tech-tag">LightGBM</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">Matplotlib</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://github.com/aryamancsk" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <span>Code Repository</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE TIMELINE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">CAREER MILESTONES</span>
+          <h2 class="section-title">Professional Experience</h2>
+          <p class="section-subtitle">Driving enterprise machine learning, software engineering, and data architectures</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Item 1: Giniminds -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Data Specialist</h3>
+                  <div class="company-name">Giniminds</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="badge-date">Dec 2025 – Jul 2026</span>
+                </div>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Architected end-to-end relational and analytical data models aggregating and cleansing multi-source enterprise datasets, <strong>accelerating downstream machine learning training workflows by 35%</strong>.</li>
+                <li>Engineered automated feature extraction pipelines and <strong>10+ interactive KPI visualization dashboards in Power BI and Python</strong>, cutting executive reporting turnaround time by 50%.</li>
+                <li>Optimized predictive modeling workflows using Scikit-Learn and SQL, improving model training stability and reducing data preprocessing latency by 40%.</li>
+              </ul>
+              <div class="tag-cloud">
+                <span class="badge">Data Modeling</span>
+                <span class="badge">Scikit-Learn</span>
+                <span class="badge">Power BI</span>
+                <span class="badge">SQL ETL</span>
+                <span class="badge">Python</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Wissen Technology -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Software Development Engineer</h3>
+                  <div class="company-name">Wissen Technology</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="badge-date">May 2025 – Aug 2025</span>
+                </div>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Designed, developed, and deployed scalable backend microservices and RESTful APIs using Python and JavaScript, supporting high-concurrency enterprise applications with <strong>99.9% availability</strong>.</li>
+                <li>Refactored backend data-access layers, asynchronous API endpoints, and CI/CD pipelines across 3 cross-functional engineering squads, <strong>reducing average query latency by 28%</strong>.</li>
+              </ul>
+              <div class="tag-cloud">
+                <span class="badge">Python</span>
+                <span class="badge">Microservices</span>
+                <span class="badge">RESTful APIs</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">CI/CD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: SuperLeap CRM -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Technical Consultant Intern</h3>
+                  <div class="company-name">SuperLeap CRM</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="badge-date">Jan 2025 – Mar 2025</span>
+                </div>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Bridged 15+ Pan-India enterprise client accounts and core engineering teams to translate business requirements into custom CRM data schemas, workflow automations, and API integrations.</li>
+                <li>Delivered 25+ live technical product demonstrations and user training workshops, driving platform adoption and <strong>reducing client onboarding turnaround time by 30%</strong>.</li>
+              </ul>
+              <div class="tag-cloud">
+                <span class="badge">API Integrations</span>
+                <span class="badge">CRM Data Schemas</span>
+                <span class="badge">Client Solutions</span>
+                <span class="badge">Workflow Automation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Aditya Birla Management Corp -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Data and Analytics Intern</h3>
+                  <div class="company-name">Aditya Birla Management Corporation Pvt. Ltd.</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="badge-date">Jun 2024 – Aug 2024</span>
+                </div>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Developed <strong>8+ Generative AI and Large Language Model (LLM) curriculum modules</strong> for 100+ senior executives and enterprise-wide corporate transformation programs.</li>
+                <li>Built automated SQL reporting queries and interactive Power BI executive dashboards for operational performance analysis, saving <strong>10+ hours of manual reporting weekly</strong>.</li>
+              </ul>
+              <div class="tag-cloud">
+                <span class="badge">GenAI & LLMs</span>
+                <span class="badge">Power BI Dashboards</span>
+                <span class="badge">SQL Automation</span>
+                <span class="badge">Executive Analytics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: PwC Acceleration Center -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Salesforce Launchpad Program Trainee</h3>
+                  <div class="company-name">PwC Acceleration Center (PwC AC)</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="badge-date">Feb 2024 – Jul 2024</span>
+                </div>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Engineered cloud-native digital transformation workflows across 4 enterprise modules leveraging Salesforce CRM, Java OOP, and RDBMS architectures, achieving <strong>100% certification benchmark completion</strong>.</li>
+              </ul>
+              <div class="tag-cloud">
+                <span class="badge">Salesforce Cloud</span>
+                <span class="badge">Java OOP</span>
+                <span class="badge">RDBMS</span>
+                <span class="badge">Digital Transformation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6: PES University CDSAML -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Summer Research Intern</h3>
+                  <div class="company-name">PES University (Center for Data Sciences & Applied ML)</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="badge-date">Jun 2023 – Aug 2023</span>
+                </div>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Designed an Intelligent Recipe Recommender System using <strong>Neo4j graph databases</strong>, Python, and Selenium across <strong>5,000+ ingredient-nutrient nodes</strong>.</li>
+                <li>Published and presented findings at the <strong>IEEE AMATHE 2024 International Conference</strong>.</li>
+              </ul>
+              <div class="tag-cloud">
+                <span class="badge">Neo4j Graph DB</span>
+                <span class="badge">Graph Algorithms</span>
+                <span class="badge">Selenium</span>
+                <span class="badge">IEEE AMATHE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH & PUBLICATIONS SECTION -->
+    <section id="research" class="section alt-bg">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">PEER-REVIEWED SCHOLARSHIP</span>
+          <h2 class="section-title">Publications & Academic Conferences</h2>
+          <p class="section-subtitle">Bridging machine learning theory with societal resilience and graph knowledge representation</p>
+        </div>
+
+        <div class="publications-grid">
+          <!-- Publication 1 -->
+          <div class="pub-card glass-card">
+            <div class="pub-type-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/></svg>
+              <span>IEEE Conference Paper &bull; ICCSP 2025</span>
+            </div>
+            <h3 class="pub-title">FloodBot – RealTime Innovative Flood Resilience Through Machine Learning</h3>
+            <p class="pub-authors">Co-Author & Presenter: <strong>Aryaman Srimali Jain</strong></p>
+            <p class="pub-venue">11th IEEE International Conference on Communication and Signal Processing (ICCSP 2025) &bull; May 2025</p>
+            <p class="pub-abstract">
+              Presents a multi-modal spatial-temporal deep learning framework combining satellite telemetry, elevation models, and neural network topologies to forecast real-time flood inundation vectors 72 hours ahead of catastrophe.
+            </p>
+            <div class="pub-meta-row">
+              <span class="doi-text">DOI: 10.1109/ICCSP64183.2025.11088698</span>
+              <div class="pub-btn-group">
+                <a href="https://doi.org/10.1109/ICCSP64183.2025.11088698" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-primary">
+                  <span>IEEE Xplore</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <button class="btn btn-xs btn-ghost copy-btn" data-copy="@inproceedings{jain2025floodbot, title={FloodBot - RealTime Innovative Flood Resilience Through Machine Learning}, author={Jain, Aryaman Srimali and others}, booktitle={11th IEEE International Conference on Communication and Signal Processing (ICCSP)}, year={2025}, doi={10.1109/ICCSP64183.2025.11088698}}">
+                  <span>BibTeX</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Publication 2 -->
+          <div class="pub-card glass-card">
+            <div class="pub-type-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span>Conference Presentation &bull; AMATHE 2024</span>
+            </div>
+            <h3 class="pub-title">Intelligent Recipe Recommender Using Graph Databases</h3>
+            <p class="pub-authors">Speaker & Researcher: <strong>Aryaman Srimali Jain</strong></p>
+            <p class="pub-venue">International Conference on Advanced Mathematics and Applications in Theoretical & Applied Sciences (AMATHE 2024) &bull; Aug 2024</p>
+            <p class="pub-abstract">
+              Explores graph database topology (Neo4j) to model intricate multi-relational ingredient, allergen, and nutrient linkages across 5,000+ nodes, achieving high-relevance personalized dietary recommendation pathways.
+            </p>
+            <div class="pub-meta-row">
+              <span class="doi-text">Venue: AMATHE 2024</span>
+              <div class="pub-btn-group">
+                <span class="badge badge-success">Presented</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS MATRIX -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">COMPETENCY MATRIX</span>
+          <h2 class="section-title">Technical Expertise & Tooling</h2>
+          <p class="section-subtitle">A balanced toolkit spanning research experimentation, full-stack microservices, and cloud deployments</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Machine Learning & AI -->
+          <div class="skill-category-card glass-card">
+            <div class="category-header">
+              <div class="category-icon ml">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </div>
+              <h3 class="category-name">Machine Learning & AI</h3>
+            </div>
+            <div class="skills-pill-wrap">
+              <span class="skill-pill highlight">PyTorch</span>
+              <span class="skill-pill highlight">Deep Learning (CNN, LSTM)</span>
+              <span class="skill-pill highlight">WideResNet-50</span>
+              <span class="skill-pill highlight">Computer Vision</span>
+              <span class="skill-pill highlight">Unsupervised Anomaly Detection</span>
+              <span class="skill-pill">PatchCore</span>
+              <span class="skill-pill">Greedy Coreset Sampling</span>
+              <span class="skill-pill">GPU kNN</span>
+              <span class="skill-pill">Scikit-Learn</span>
+              <span class="skill-pill">XGBoost & LightGBM</span>
+              <span class="skill-pill">Generative AI & LLMs</span>
+            </div>
+          </div>
+
+          <!-- Backend, Cloud & MLOps -->
+          <div class="skill-category-card glass-card">
+            <div class="category-header">
+              <div class="category-icon backend">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+              </div>
+              <h3 class="category-name">Backend, Cloud & MLOps</h3>
+            </div>
+            <div class="skills-pill-wrap">
+              <span class="skill-pill highlight">FastAPI & Uvicorn</span>
+              <span class="skill-pill highlight">RESTful Microservices</span>
+              <span class="skill-pill highlight">AWS (S3, VPC, Lambda)</span>
+              <span class="skill-pill">Gradio</span>
+              <span class="skill-pill">CI/CD Pipelines</span>
+              <span class="skill-pill">Docker & Virtualization</span>
+              <span class="skill-pill">Git Version Control</span>
+              <span class="skill-pill">Linux & Windows Environments</span>
+            </div>
+          </div>
+
+          <!-- Data Science & Databases -->
+          <div class="skill-category-card glass-card">
+            <div class="category-header">
+              <div class="category-icon data">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <h3 class="category-name">Data Science & Databases</h3>
+            </div>
+            <div class="skills-pill-wrap">
+              <span class="skill-pill highlight">SQL & RDBMS</span>
+              <span class="skill-pill highlight">Neo4j (Graph DB)</span>
+              <span class="skill-pill">SQLite</span>
+              <span class="skill-pill">Pandas & NumPy</span>
+              <span class="skill-pill">SciPy</span>
+              <span class="skill-pill">Feature Engineering</span>
+              <span class="skill-pill">Statistical Thresholding</span>
+              <span class="skill-pill">ETL Pipelines</span>
+            </div>
+          </div>
+
+          <!-- Languages & Analytics -->
+          <div class="skill-category-card glass-card">
+            <div class="category-header">
+              <div class="category-icon lang">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3 class="category-name">Languages & Analytics</h3>
+            </div>
+            <div class="skills-pill-wrap">
+              <span class="skill-pill highlight">Python</span>
+              <span class="skill-pill highlight">SQL</span>
+              <span class="skill-pill">Java</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">C</span>
+              <span class="skill-pill">HTML5 / CSS3</span>
+              <span class="skill-pill">Power BI Dashboards</span>
+              <span class="skill-pill">Matplotlib / Seaborn</span>
+              <span class="skill-pill">Salesforce CRM</span>
+              <span class="skill-pill">Selenium Automation</span>
+              <span class="skill-pill">MATLAB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & HONORS SECTION -->
+    <section id="education" class="section alt-bg">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ACADEMIC FOUNDATION</span>
+          <h2 class="section-title">Education, Scholarships & Honors</h2>
+          <p class="section-subtitle">Top-tier graduate training in Singapore and merit-honored engineering foundations</p>
+        </div>
+
+        <div class="edu-grid">
+          <!-- NUS -->
+          <div class="edu-card glass-card featured-edu">
+            <div class="edu-top">
+              <div class="school-badge">NUS</div>
+              <div class="edu-main">
+                <span class="degree-badge">Current Graduate Studies</span>
+                <h3 class="edu-degree">Master of Technology (M.Tech) in Artificial Intelligence Systems</h3>
+                <h4 class="edu-institution">National University of Singapore — Institute of Systems Science (NUS-ISS)</h4>
+              </div>
+              <div class="edu-meta">
+                <span class="badge-date">Aug 2026 – Present</span>
+                <span class="location-text">Singapore</span>
+              </div>
+            </div>
+
+            <div class="edu-details">
+              <p class="edu-desc">
+                Currently pursuing 1st-semester rigorous graduate curriculum focused on deploying reliable, robust, and ethical AI in production enterprise environments across 5 foundational tracks:
+              </p>
+              <div class="tracks-grid">
+                <div class="track-pill">Deep Learning</div>
+                <div class="track-pill">Computer Vision</div>
+                <div class="track-pill">Unsupervised Anomaly Detection</div>
+                <div class="track-pill">Pattern Recognition Systems</div>
+                <div class="track-pill">MLOps & Production Serving</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PES University -->
+          <div class="edu-card glass-card">
+            <div class="edu-top">
+              <div class="school-badge">PES</div>
+              <div class="edu-main">
+                <span class="degree-badge">Graduated &bull; Top 10%</span>
+                <h3 class="edu-degree">Bachelor of Technology (B.Tech) in Computer Science & Engineering</h3>
+                <h4 class="edu-institution">PES University</h4>
+              </div>
+              <div class="edu-meta">
+                <span class="badge-date">Oct 2021 – May 2025</span>
+                <span class="location-text">Bengaluru, India</span>
+              </div>
+            </div>
+
+            <div class="edu-details">
+              <div class="cgpa-badge">
+                <strong>CGPA: 7.37 / 10.0</strong> (3.0+ US GPA Equivalent)
+              </div>
+              <div class="scholarship-box">
+                <div class="scholarship-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                  <span>Awarded 2 Prestigious Merit Scholarships:</span>
+                </div>
+                <ul class="scholarship-list">
+                  <li><strong>Distinction Award Certificate (DAC) Scholarship</strong></li>
+                  <li><strong>ICICI Bank Employee Merit Scholarship</strong> (awarded to top 10% of cohort)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications & Campus Leadership Strip -->
+        <div class="certifications-banner glass-card">
+          <div class="cert-col">
+            <div class="cert-header">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6366F1" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <h3>12+ Industry Certifications (2023 – 2024)</h3>
+            </div>
+            <p>
+              AWS Cloud (Networking, Serverless, Storage) &bull; PwC Launchpad (Digital Intelligence, RDBMS, Salesforce) &bull; Coursera (Computer Vision, Python for Data Science, SQL, Power BI) &bull; Infosys Springboard (ML with Python) &bull; MATLAB &bull; HackerRank &bull; Atlassian Jira
+            </p>
+          </div>
+          <div class="cert-col">
+            <div class="cert-header">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <h3>Leadership & Impact</h3>
+            </div>
+            <p>
+              Coordinated campus-wide operations for <strong>2,000+ attendees</strong> as Disciplinary & Organizing Committee Member during the Golden Jubilee Celebrations at PES University (Dec 2023).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-wrapper glass-card">
+          <div class="contact-grid">
+            <div class="contact-info">
+              <span class="section-tag">START A CONVERSATION</span>
+              <h2 class="section-title">Let's Build Something Exceptional</h2>
+              <p class="contact-blurb">
+                I am actively seeking machine learning engineering opportunities, computer vision research collaborations, and full-stack AI roles in Singapore and globally. Whether you have a challenging technical problem or an exciting opportunity, I'd love to connect.
+              </p>
+
+              <div class="contact-links-list">
+                <a href="mailto:aryamanjain96@gmail.com" class="contact-item">
+                  <div class="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-label">Email Directly</span>
+                    <span class="contact-value">aryamanjain96@gmail.com</span>
+                  </div>
+                </a>
+
+                <a href="tel:+6586960192" class="contact-item">
+                  <div class="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-label">Mobile / WhatsApp</span>
+                    <span class="contact-value">+65-86960192</span>
+                  </div>
+                </a>
+
+                <a href="https://linkedin.com/in/aryaman-s-jain" target="_blank" rel="noopener noreferrer" class="contact-item">
+                  <div class="contact-icon">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-label">Professional Network</span>
+                    <span class="contact-value">linkedin.com/in/aryaman-s-jain</span>
+                  </div>
+                </a>
+
+                <a href="https://github.com/aryamancsk" target="_blank" rel="noopener noreferrer" class="contact-item">
+                  <div class="contact-icon">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-label">Open Source Work</span>
+                    <span class="contact-value">github.com/aryamancsk</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Fast Direct Message Form -->
+            <div class="contact-form-card">
+              <form id="contact-form" class="styled-form">
+                <div class="form-group">
+                  <label for="form-name">Your Name</label>
+                  <input type="text" id="form-name" required placeholder="e.g. Dr. Alex Vance / Recruiter">
+                </div>
+                <div class="form-group">
+                  <label for="form-email">Your Email</label>
+                  <input type="email" id="form-email" required placeholder="name@company.com">
+                </div>
+                <div class="form-group">
+                  <label for="form-subject">Subject</label>
+                  <input type="text" id="form-subject" required placeholder="AI/ML Engineer Role or Collaboration">
+                </div>
+                <div class="form-group">
+                  <label for="form-message">Message</label>
+                  <textarea id="form-message" rows="4" required placeholder="Tell me about your team, challenge, or project..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                  <span>Send Message</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+                <div id="form-status" class="form-status" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- INTERACTIVE MODAL 1: MVTec LOCO AD DEFECT SIMULATOR -->
+  <div id="demo-modal-mvtec" class="modal-backdrop" aria-hidden="true" role="dialog" aria-labelledby="mvtec-modal-title">
+    <div class="modal-dialog glass-card">
+      <div class="modal-header">
+        <div>
+          <span class="badge-tag">INTERACTIVE VISION ENGINE</span>
+          <h3 id="mvtec-modal-title">MVTec LOCO AD &bull; Anomaly Inspector Simulator</h3>
+        </div>
+        <button class="modal-close" data-close="demo-modal-mvtec" aria-label="Close Modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-explainer">
+          Toggle between simulated industrial categories and defect classes to see how the <strong>WideResNet-50 + Greedy Coreset (10%)</strong> pipeline calculates nearest-neighbor distances, applies Gaussian spatial smoothing, and sets statistical thresholds.
+        </p>
+
+        <!-- Category Selector -->
+        <div class="simulator-controls">
+          <label>Select Industrial Category:</label>
+          <div class="sim-pill-group" id="sim-category-group">
+            <button class="sim-pill active" data-cat="breakfast_box">Breakfast Box</button>
+            <button class="sim-pill" data-cat="juice_bottle">Juice Bottle</button>
+            <button class="sim-pill" data-cat="pushpins">Pushpins</button>
+            <button class="sim-pill" data-cat="screw_bag">Screw Bag</button>
+            <button class="sim-pill" data-cat="splicing_connectors">Splicing Connectors</button>
+          </div>
+        </div>
+
+        <!-- Defect Type Selector -->
+        <div class="simulator-controls">
+          <label>Inspect Sample State:</label>
+          <div class="sim-pill-group" id="sim-state-group">
+            <button class="sim-pill active" data-state="normal">Pristine / Normal</button>
+            <button class="sim-pill" data-state="structural">Structural Anomaly (Physical Defect)</button>
+            <button class="sim-pill" data-state="logical">Logical Anomaly (Ratio / Miswiring)</button>
+          </div>
+        </div>
+
+        <!-- Live Visual Inspection Canvas -->
+        <div class="sim-display-grid">
+          <div class="sim-view glass-panel">
+            <div class="sim-view-header">
+              <span>Input Frame &amp; Defect Overlay</span>
+              <span id="sim-status-chip" class="status-chip normal">NORMAL (0.12)</span>
+            </div>
+            <div class="sim-canvas-viewport" id="sim-viewport">
+              <div class="sample-graphic" id="sample-graphic">
+                <!-- Dynamically rendered via JS -->
+              </div>
+            </div>
+          </div>
+
+          <div class="sim-telemetry glass-panel font-mono">
+            <div class="sim-view-header">
+              <span>Inference Telemetry</span>
+              <span class="badge-speed">174 ms</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="tele-lbl">Feature Extractor:</span>
+              <span class="tele-val">WideResNet-50-2 (layer2+3)</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="tele-lbl">Coreset Ratio:</span>
+              <span class="tele-val">10% Greedy Subsampled</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="tele-lbl">Search Algorithm:</span>
+              <span class="tele-val">GPU-accelerated TorchNN k-NN (k=9)</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="tele-lbl">Anomaly Score:</span>
+              <span class="tele-val highlight-val" id="tele-score">0.142</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="tele-lbl">Decision Threshold:</span>
+              <span class="tele-val" id="tele-threshold">0.580 (Optimal F1)</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="tele-lbl">Verdict:</span>
+              <span class="tele-val verdict-tag" id="tele-verdict">PASS &bull; NO ANOMALY</span>
+            </div>
+            
+            <div class="threshold-slider-box">
+              <label for="thresh-slider">Adjust Quality Threshold (&mu; + n&sigma;):</label>
+              <input type="range" id="thresh-slider" min="0.30" max="0.90" step="0.05" value="0.58">
+              <div class="slider-ticks">
+                <span>Strict (&mu;+2&sigma;)</span>
+                <span>Optimal F1</span>
+                <span>Permissive (&mu;+4&sigma;)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE MODAL 2: FLOODBOT TELEMETRY SIMULATOR -->
+  <div id="demo-modal-floodbot" class="modal-backdrop" aria-hidden="true" role="dialog" aria-labelledby="floodbot-modal-title">
+    <div class="modal-dialog glass-card">
+      <div class="modal-header">
+        <div>
+          <span class="badge-tag">IEEE RESEARCH SIMULATOR</span>
+          <h3 id="floodbot-modal-title">FloodBot &bull; 72-Hour Geospatial Inundation Radar</h3>
+        </div>
+        <button class="modal-close" data-close="demo-modal-floodbot" aria-label="Close Modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-explainer">
+          Simulate multi-modal telemetry inputs (Rainfall, Soil Saturation, River Gauge Elevation) to evaluate FloodBot's <strong>CNN deep spatial forecasting engine</strong>.
+        </p>
+
+        <div class="flood-sim-grid">
+          <div class="telemetry-sliders glass-panel">
+            <h4>Telemetry Parameters</h4>
+            
+            <div class="tele-slider-control">
+              <div class="slider-head">
+                <label for="slide-rain">Precipitation Telemetry (mm/24h):</label>
+                <span id="val-rain" class="font-mono">140 mm</span>
+              </div>
+              <input type="range" id="slide-rain" min="10" max="350" value="140">
+            </div>
+
+            <div class="tele-slider-control">
+              <div class="slider-head">
+                <label for="slide-soil">Soil Moisture Saturation (%):</label>
+                <span id="val-soil" class="font-mono">68%</span>
+              </div>
+              <input type="range" id="slide-soil" min="10" max="100" value="68">
+            </div>
+
+            <div class="tele-slider-control">
+              <div class="slider-head">
+                <label for="slide-dem">Digital Elevation Model (DEM Index):</label>
+                <span id="val-dem" class="font-mono">Low-Lying Basin (0.32)</span>
+              </div>
+              <input type="range" id="slide-dem" min="1" max="10" value="3">
+            </div>
+          </div>
+
+          <div class="flood-radar-panel glass-panel">
+            <h4>72-Hour Inundation Risk Forecast</h4>
+            <div class="gauge-container">
+              <div class="gauge-arc">
+                <div class="gauge-fill" id="flood-gauge-fill"></div>
+                <div class="gauge-cover">
+                  <div class="gauge-number font-mono" id="flood-risk-score">62%</div>
+                  <div class="gauge-label" id="flood-risk-status">MODERATE RISK</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="forecast-timeline font-mono">
+              <div class="timeline-step">
+                <span class="step-time">+24h</span>
+                <span class="step-forecast" id="fc-24h">Water Rise +0.8m</span>
+              </div>
+              <div class="timeline-step">
+                <span class="step-time">+48h</span>
+                <span class="step-forecast" id="fc-48h">Basin Saturation Peak</span>
+              </div>
+              <div class="timeline-step">
+                <span class="step-time">+72h</span>
+                <span class="step-forecast" id="fc-72h">Alert Triggered</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="brand-logo footer-logo">
+          <span class="logo-badge">ASJ</span>
+          <span class="logo-text">Aryaman Srimali Jain</span>
+        </div>
+        <p class="footer-tagline">AI & Machine Learning Engineer &bull; M.Tech (AI Systems) @ NUS-ISS</p>
+        <p class="footer-copy">&copy; <span id="current-year">2026</span> Aryaman Srimali Jain. All rights reserved.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-group">
+          <span class="footer-group-title">Navigation</span>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#research">Publications</a>
+        </div>
+        <div class="footer-group">
+          <span class="footer-group-title">Connect</span>
+          <a href="https://linkedin.com/in/aryaman-s-jain" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/aryamancsk" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="mailto:aryamanjain96@gmail.com">Email Direct</a>
+          <a href="tel:+6586960192">+65-86960192</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -464,16 +464,33 @@ function initFloodBotSimulator() {
 }
 
 /* ==========================================================================
-   9. Direct Contact Form Interaction
+   9. Direct Contact Form Interaction (Live Email Dispatch)
    ========================================================================== */
 function initContactForm() {
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
   const submitBtn = document.getElementById('form-submit-btn');
+  const mailtoBtn = document.getElementById('form-mailto-btn');
 
-  form?.addEventListener('submit', (e) => {
+  // Handle direct Form Submission via AJAX to FormSubmit
+  form?.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (!submitBtn || !status) return;
+
+    const nameInput = document.getElementById('form-name');
+    const emailInput = document.getElementById('form-email');
+    const subjectInput = document.getElementById('form-subject');
+    const messageInput = document.getElementById('form-message');
+    const hiddenSubject = document.getElementById('form-hidden-subject');
+
+    const name = nameInput?.value.trim() || 'Portfolio Visitor';
+    const email = emailInput?.value.trim() || '';
+    const subject = subjectInput?.value.trim() || 'General Inquiry';
+    const message = messageInput?.value.trim() || '';
+
+    if (hiddenSubject) {
+      hiddenSubject.value = `[Portfolio] ${subject} — from ${name}`;
+    }
 
     const originalBtnText = submitBtn.innerHTML;
     submitBtn.innerHTML = `
@@ -481,21 +498,67 @@ function initContactForm() {
         <circle cx="12" cy="12" r="10"/>
         <path d="M12 2a10 10 0 0 1 10 10"/>
       </svg>
-      <span>Sending Dispatch...</span>
+      <span>Dispatching to Aryaman...</span>
     `;
+    submitBtn.disabled = true;
     submitBtn.style.opacity = '0.7';
 
-    setTimeout(() => {
-      submitBtn.innerHTML = originalBtnText;
-      submitBtn.style.opacity = '1';
-      status.className = 'form-status success';
-      status.textContent = '✓ Thank you! Your message has been routed to Aryaman. You will receive a response shortly.';
-      form.reset();
+    status.className = 'form-status';
+    status.textContent = 'Transmitting message to aryamanjain96@gmail.com...';
 
-      setTimeout(() => {
-        status.textContent = '';
-      }, 6000);
-    }, 1200);
+    try {
+      const formData = new FormData(form);
+
+      const response = await fetch('https://formsubmit.co/ajax/aryamanjain96@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (response.ok || data.success === 'true' || data.success === true) {
+        status.className = 'form-status success';
+        status.innerHTML = '✓ <strong>Message dispatched successfully!</strong> Aryaman has received your inquiry and will follow up shortly.';
+        form.reset();
+        showToast('Message sent to Aryaman!');
+      } else if (data.message && data.message.includes('Activation')) {
+        // FormSubmit sent first-time activation to Aryaman
+        status.className = 'form-status success';
+        status.innerHTML = '✓ <strong>Transmission sent!</strong> FormSubmit is verifying delivery to aryamanjain96@gmail.com.';
+        form.reset();
+        showToast('Inquiry received!');
+      } else {
+        throw new Error(data.message || 'Delivery failed');
+      }
+    } catch (err) {
+      console.warn('Form submission fallback triggered:', err);
+      status.className = 'form-status error';
+      status.innerHTML = `
+        <span>Network dispatch encountered an issue.</span>
+        <a href="mailto:aryamanjain96@gmail.com?subject=${encodeURIComponent('[Portfolio] ' + subject)}&body=${encodeURIComponent('Hi Aryaman,\n\n' + message + '\n\nBest,\n' + name + ' (' + email + ')')}" style="color: #6366F1; text-decoration: underline; margin-left: 6px; font-weight: 700;">
+          Click here to open directly in your Email App &rarr;
+        </a>
+      `;
+    } finally {
+      submitBtn.innerHTML = originalBtnText;
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = '1';
+    }
+  });
+
+  // Handle "Open in Email App" button click
+  mailtoBtn?.addEventListener('click', () => {
+    const name = document.getElementById('form-name')?.value.trim() || 'Visitor';
+    const email = document.getElementById('form-email')?.value.trim() || '';
+    const subject = document.getElementById('form-subject')?.value.trim() || 'AI/ML Discussion / Opportunity';
+    const message = document.getElementById('form-message')?.value.trim() || 'Hi Aryaman,\n\nI came across your portfolio and would love to connect regarding...';
+
+    const mailtoUrl = `mailto:aryamanjain96@gmail.com?subject=${encodeURIComponent('[Portfolio] ' + subject)}&body=${encodeURIComponent(message + '\n\n— Sent by ' + name + ' (' + email + ')')}`;
+    window.location.href = mailtoUrl;
+    showToast('Opening your email app...');
   });
 }
 

@@ -1455,6 +1455,12 @@ html.light .alt-bg {
   gap: 1.25rem;
 }
 
+.form-buttons-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
 .form-group {
   display: flex;
   flex-direction: column;

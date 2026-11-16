@@ -117,11 +117,11 @@ function initCopyButtons() {
     });
   });
 
-  // Download notifications for website zip archive
-  const downloadLinks = document.querySelectorAll('.download-link');
+  // Download notifications for resume PDF
+  const downloadLinks = document.querySelectorAll('.download-resume-link');
   downloadLinks.forEach(link => {
     link.addEventListener('click', () => {
-      showToast('Downloading complete website archive (.zip)...');
+      showToast("Downloading Aryaman's Resume (PDF)...");
     });
   });
 }

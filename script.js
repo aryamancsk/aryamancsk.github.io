@@ -12,6 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initMVTecSimulator();
   initFloodBotSimulator();
   initContactForm();
+  initProgressBar();
+  initSingaporeClock();
+  initNeuralCanvas();
+  initSpotlightEffect();
+  initScrollReveal();
   updateCurrentYear();
 });
 
@@ -497,4 +502,188 @@ function initContactForm() {
 function updateCurrentYear() {
   const yr = document.getElementById('current-year');
   if (yr) yr.textContent = new Date().getFullYear().toString();
+}
+
+/* ==========================================================================
+   10. Reading Progress Bar
+   ========================================================================== */
+function initProgressBar() {
+  const bar = document.getElementById('scroll-progress-bar');
+  if (!bar) return;
+
+  window.addEventListener('scroll', () => {
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
+    bar.style.width = `${progress}%`;
+  }, { passive: true });
+}
+
+/* ==========================================================================
+   11. Live Singapore (SGT) Clock
+   ========================================================================== */
+function initSingaporeClock() {
+  const clockEl = document.getElementById('sgt-clock-header');
+  if (!clockEl) return;
+
+  function updateClock() {
+    try {
+      const now = new Date();
+      const timeStr = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'Asia/Singapore',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+      }).format(now);
+      clockEl.textContent = `${timeStr} SGT`;
+    } catch {
+      clockEl.textContent = 'Singapore (UTC+8)';
+    }
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+}
+
+/* ==========================================================================
+   12. Interactive Synapsing Neural Network Canvas
+   ========================================================================== */
+function initNeuralCanvas() {
+  const canvas = document.getElementById('neural-canvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let width = (canvas.width = canvas.parentElement.offsetWidth);
+  let height = (canvas.height = canvas.parentElement.offsetHeight);
+
+  window.addEventListener('resize', () => {
+    width = canvas.width = canvas.parentElement.offsetWidth;
+    height = canvas.height = canvas.parentElement.offsetHeight;
+  });
+
+  const mouse = { x: -1000, y: -1000 };
+  canvas.parentElement.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+  });
+
+  canvas.parentElement.addEventListener('mouseleave', () => {
+    mouse.x = -1000;
+    mouse.y = -1000;
+  });
+
+  // Generate nodes
+  const nodeCount = Math.floor(Math.min(width, 1200) / 22);
+  const nodes = [];
+
+  for (let i = 0; i < nodeCount; i++) {
+    nodes.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.7,
+      vy: (Math.random() - 0.5) * 0.7,
+      radius: Math.random() * 2 + 1.2
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+
+    const isLight = document.documentElement.classList.contains('light');
+    const nodeColor = isLight ? 'rgba(99, 102, 241, 0.45)' : 'rgba(99, 102, 241, 0.75)';
+    const lineColorBase = isLight ? '99, 102, 241' : '6, 182, 212';
+
+    // Update and draw nodes
+    for (let i = 0; i < nodes.length; i++) {
+      const n = nodes[i];
+      n.x += n.vx;
+      n.y += n.vy;
+
+      if (n.x < 0 || n.x > width) n.vx *= -1;
+      if (n.y < 0 || n.y > height) n.vy *= -1;
+
+      // Mouse repulsion
+      const dx = mouse.x - n.x;
+      const dy = mouse.y - n.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 120) {
+        const force = (120 - dist) / 120;
+        n.x -= (dx / dist) * force * 1.5;
+        n.y -= (dy / dist) * force * 1.5;
+      }
+
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
+      ctx.fillStyle = nodeColor;
+      ctx.fill();
+
+      // Connect near neighbors
+      for (let j = i + 1; j < nodes.length; j++) {
+        const n2 = nodes[j];
+        const dxx = n.x - n2.x;
+        const dyy = n.y - n2.y;
+        const d = Math.sqrt(dxx * dxx + dyy * dyy);
+
+        if (d < 125) {
+          const alpha = (1 - d / 125) * 0.35;
+          ctx.beginPath();
+          ctx.moveTo(n.x, n.y);
+          ctx.lineTo(n2.x, n2.y);
+          ctx.strokeStyle = `rgba(${lineColorBase}, ${alpha})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+}
+
+/* ==========================================================================
+   13. Linear-Style Cursor Spotlight Border Glow
+   ========================================================================== */
+function initSpotlightEffect() {
+  const cards = document.querySelectorAll('.glass-card, .timeline-card, .skill-category-card, .pub-card, .about-card');
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+}
+
+/* ==========================================================================
+   14. Stagger Scroll Reveal
+   ========================================================================== */
+function initScrollReveal() {
+  const elements = document.querySelectorAll(
+    '.reveal, .about-card, .project-card, .timeline-item, .pub-card, .skill-category-card, .edu-card, .certifications-banner, .contact-wrapper'
+  );
+
+  elements.forEach((el, index) => {
+    el.classList.add('reveal');
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  elements.forEach(el => observer.observe(el));
 }

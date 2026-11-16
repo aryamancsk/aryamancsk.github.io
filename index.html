@@ -22,6 +22,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Reading Progress Bar -->
+  <div id="scroll-progress-bar" class="scroll-progress-bar" aria-hidden="true"></div>
+
   <!-- Ambient background glow elements -->
   <div class="ambient-glow glow-1" aria-hidden="true"></div>
   <div class="ambient-glow glow-2" aria-hidden="true"></div>
@@ -51,6 +54,13 @@
       </nav>
 
       <div class="header-actions">
+        <!-- Live Singapore Clock Pill in Header -->
+        <div class="sgt-pill hide-mobile" title="Current Time in Singapore (SGT • UTC+8)">
+          <span class="live-dot"></span>
+          <span class="sgt-label">Singapore:</span>
+          <span id="sgt-clock-header" class="font-mono">--:--:-- SGT</span>
+        </div>
+
         <button id="theme-toggle" class="icon-button" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
           <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="5"></circle>
@@ -82,11 +92,25 @@
   <main>
     <!-- HERO SECTION -->
     <section id="hero" class="hero-section">
+      <!-- Interactive Synapsing Neural Network Canvas -->
+      <canvas id="neural-canvas" class="neural-canvas" aria-hidden="true"></canvas>
+
       <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="status-pill">
-            <span class="status-indicator"></span>
-            <span>M.Tech AI Systems @ NUS-ISS &bull; Open to Research & AI/ML Roles</span>
+        <div class="hero-content reveal">
+          <div class="hero-header-row">
+            <!-- Executive Monogram / Headshot Frame with Animated Orbit Ring -->
+            <div class="avatar-orbit-wrapper">
+              <div class="orbit-ring" aria-hidden="true"></div>
+              <div class="avatar-box">
+                <span class="avatar-initials">ASJ</span>
+              </div>
+              <div class="avatar-pulse-dot" title="Based in Singapore"></div>
+            </div>
+
+            <div class="status-pill">
+              <span class="status-indicator"></span>
+              <span>M.Tech AI Systems @ NUS-ISS &bull; Active for AI/ML Roles</span>
+            </div>
           </div>
 
           <h1 class="hero-title">
@@ -134,7 +158,7 @@
         </div>
 
         <!-- Hero Metric / Interactive Code Card -->
-        <div class="hero-visual">
+        <div class="hero-visual reveal">
           <div class="glass-terminal">
             <div class="terminal-header">
               <div class="terminal-dots">

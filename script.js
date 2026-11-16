@@ -579,25 +579,23 @@ function initContactForm() {
         form.reset();
         showToast('Message sent to Aryaman!');
       } else if (resData.message && resData.message.includes('Activation')) {
-        // FormSubmit pending email activation
-        status.className = 'form-status';
+        // FormSubmit pending email activation - automatically launch Gmail so user is never blocked!
+        window.open(gmailFallbackUrl, '_blank');
+        status.className = 'form-status success';
         status.innerHTML = `
-          <div style="background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.35); border-radius: 8px; padding: 1rem; text-align: left; margin-top: 0.5rem;">
-            <div style="font-weight: 700; color: #F59E0B; margin-bottom: 0.35rem; font-size: 0.92rem;">
-              📬 Action Required: One-Time Form Activation
+          <div style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 8px; padding: 1rem; text-align: left; margin-top: 0.5rem;">
+            <div style="font-weight: 700; color: #10B981; margin-bottom: 0.35rem; font-size: 0.95rem;">
+              ✓ Opened Gmail Compose with your message!
             </div>
-            <p style="font-size: 0.82rem; color: #CBD5E1; line-height: 1.5; margin-bottom: 0.75rem;">
-              FormSubmit requires a <strong>one-time confirmation</strong> to prevent spam. A verification email has been sent to <strong>aryamanjain96@gmail.com</strong>.<br>
-              <strong>Open that email and click "Activate Form" once.</strong> After that single click, all direct submissions from this button will deliver straight to your inbox forever!
+            <p style="font-size: 0.84rem; color: #CBD5E1; line-height: 1.5; margin-bottom: 0.75rem;">
+              Your message has been pre-drafted and opened in a new Gmail tab addressed to <strong>aryamanjain96@gmail.com</strong>. Simply click <strong>Send</strong> in Gmail.
             </p>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="${gmailFallbackUrl}" target="_blank" class="btn btn-sm btn-primary">
-                <span>Send via Gmail Web in the meantime &rarr;</span>
-              </a>
+            <div style="font-size: 0.75rem; color: #94A3B8;">
+              Tip: If you want direct background sending without opening Gmail, check your inbox for the FormSubmit email, right-click the button &rarr; "Copy link address" &rarr; paste into your browser to activate.
             </div>
           </div>
         `;
-        showToast('Please check Gmail for activation link');
+        showToast('Opened Gmail Compose with your message!');
       } else {
         throw new Error(resData.message || 'Delivery error');
       }
